@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+public class Task3 {
+    public static void main(String[] args) {
+        Scanner keyboard = new Scanner(System.in);
+        try {
+            double numToBeSquareRooted = keyboard.nextDouble();
+            if (numToBeSquareRooted < 0) {
+                throw new ArithmeticException("Please enter a number greater than or equal to zero.");
+            } else {
+                double squareRootResult = Math.sqrt(numToBeSquareRooted);
+                System.out.println("The square root of " + numToBeSquareRooted + " = " + squareRootResult);
+            }
+        } catch (ArithmeticException e) {
+            e.printStackTrace();
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            keyboard.close();
+        }
+    }
+}
