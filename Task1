@@ -1,0 +1,12 @@
+public class Task4 extends Exception {
+    protected String tooManyMessage;
+    public Task4() {
+    }
+    public Task4(String message) {
+        super(message);
+        this.tooManyMessage = message;
+    }
+    public String getTooManyMessage() {
+        return this.tooManyMessage;
+    }
+}
